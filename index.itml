@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>职场文章生成器</title>
+    <script>
+        // 预定义一些职场相关的文章段落
+        const articles = [
+            "在职场中，有效沟通是成功的关键。",
+            "团队合作能够提升工作效率，并促进创新。",
+            "持续学习是职场发展不可或缺的一部分。",
+            "领导力的培养对于职业成长至关重要。",
+            "时间管理技能可以帮助你更好地应对工作中的挑战。"
+        ];
+
+        function generateArticle() {
+            // 随机选择一篇文章段落
+            const article = articles[Math.floor(Math.random() * articles.length)];
+            // 显示文章
+            document.getElementById('article').innerText = article;
+        }
+    </script>
+</head>
+<body onload="generateArticle()">
+    <h1>职场文章生成器</h1>
+    <p>点击下面的按钮来生成一篇职场相关的文章。</p>
+    <button onclick="generateArticle()">生成文章</button>
+    <p id="article"></p>
+</body>
+</html>
